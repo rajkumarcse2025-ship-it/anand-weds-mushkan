@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{
+ height:100%;
+ overflow:hidden;
+ font-family:'Poppins',sans-serif;
+ background:linear-gradient(to bottom,#000,#2b0000);
+ color:white;
+}
+
+#slider{
+ height:100vh;
+ overflow:hidden;
+ position:relative;
+}
+
+.slide{
+ height:100vh;
+ width:100%;
+ position:absolute;
+ top:0;
+ left:0;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ opacity:0;
+ transform:translateY(100%);
+ transition:all 1.5s ease;
+ padding:30px;
+}
+
+.slide.active{
+ opacity:1;
+ transform:translateY(0);
+}
+
+.ganesha{
+ width:180px;
+ animation:float 3s infinite;
+ margin-bottom:20px;
+}
+
+@keyframes float{
+ 0%{transform:translateY(0);}    
+ 50%{transform:translateY(-12px);}    
+ 100%{transform:translateY(0);}    
+}
+
+.title{
+ font-family:'Great Vibes',cursive;
+ font-size:56px;
+ color:gold;
+ margin-bottom:18px;
+ animation:fadeIn 2s ease;
+}
+
+.subtitle{
+ font-size:25px;
+ max-width:900px;
+ line-height:1.9;
+ margin-bottom:25px;
+ font-family:'Playfair Display',serif;
+ animation:fadeIn 2.5s ease;
+}
+
+@keyframes fadeIn{
+ from{opacity:0;}
+ to{opacity:1;}
+}
+
+.card{
+ width:280px;
+ background:#111;
+ padding:15px;
+ border-radius:20px;
+ box-shadow:0 0 20px gold;
+ animation:zoomIn 1.5s ease;
+}
+
+@keyframes zoomIn{
+ from{transform:scale(0.7);opacity:0;}
+ to{transform:scale(1);opacity:1;}
+}
+
+.card img{
+ width:100%;
+ height:350px;
+ object-fit:cover;
+ border-radius:15px;
+}
+
+.couple{
+ display:flex;
+ gap:30px;
+ flex-wrap:wrap;
+ justify-content:center;
+}
+
+.family-box{
+ font-size:22px;
+ line-height:2.2;
+ margin-top:20px;
+ font-family:'Playfair Display',serif;
+ animation:scrollCredits 18s linear infinite;
+}
+
+@keyframes scrollCredits{
+ from{transform:translateY(100%);}    
+ to{transform:translateY(-100%);}    
+}
+
+.invite-text{
+ font-size:25px;
+ max-width:950px;
+ line-height:2;
+ font-family:'Playfair Display',serif;
+ animation:fadeIn 2s ease;
+}
+
+.fireworks{
+ font-size:60px;
+ margin-top:30px;
+ animation:boom 1s infinite alternate;
+}
+
+@keyframes boom{
+ from{transform:scale(1);}    
+ to{transform:scale(1.3);}    
+}
+
+.heart{
+ position:fixed;
+ bottom:-50px;
+ font-size:22px;
+ animation:rise 6s linear infinite;
+}
+
+@keyframes rise{
+ to{transform:translateY(-110vh);}    
+}
+
+.event-card{
+ background:rgba(255,215,0,0.08);
+ border:1px solid rgba(255,215,0,0.4);
+ border-radius:18px;
+ padding:22px 34px;
+ margin:18px 0;
+ box-shadow:0 0 15px rgba(255,215,0,0.5);
+ animation:fadeInUp 1.2s ease forwards;
+ opacity:0;
+ font-size:22px;
+}
+
+.event-card:nth-child(1){animation-delay:0.3s;}
+.event-card:nth-child(2){animation-delay:0.8s;}
+.event-card:nth-child(3){animation-delay:1.3s;}
+
+@keyframes fadeInUp{
+ from{
+  transform:translateY(40px);
+  opacity:0;
+ }
+ to{
+  transform:translateY(0);
+  opacity:1;
+ }
+}
+
+.card-photo{
+ max-width:420px;
+ border-radius:18px;
+ box-shadow:0 0 18px gold;
+ animation:zoomIn 1.8s ease;
+}
+
+/* Small credit name in corner */
+.credit{
+ position:absolute;
+ bottom:10px;
+ right:15px;
+ font-size:12px;
+ opacity:0.7;
+ font-family:'Poppins',sans-serif;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="slider">
+
+<!-- SLIDE 1 GANESHA -->
+<div class="slide active">
+<img class="ganesha" src="ganesha.png">
+<div class="title">🙏 Shree Ganeshaya Namah 🙏</div>
+<div class="subtitle">
+|| Shree Ganeshaya Namah ||<br><br>
+Mangalam Bhagwan Vishnu,<br>
+Mangalam Garudadhwajah,<br>
+Mangalam Pundarikaksha,<br>
+Mangalaya Tano Harih.<br><br>
+With the divine blessings of Lord Ganesha and the love of our elders, we are beginning a beautiful and sacred new chapter in our lives.
+</div>
+</div>
+
+<!-- SLIDE 2 STORY -->
+<div class="slide">
+<div class="title">Two Hearts, One Journey</div>
+<div class="subtitle">
+From different paths, destiny brought us together. Our hearts met, our families united, and now we step forward into a life filled with love, trust, and happiness.
+</div>
+</div>
+
+<!-- SLIDE 3 COUPLE -->
+<div class="slide">
+<div class="title">The Groom & The Bride</div>
+<div class="couple">
+
+<div class="card">
+<img src="groom.jpg">
+<br><br>
+<h3>Beloved Groom (ANAND KUMAR)</h3>
+</div>
+
+<div class="card">
+<img src="bride.jpg">
+<br><br>
+<h3>Beloved Bride (MUSHKAN KUMARI)</h3>
+</div>
+
+</div>
+</div>
+
+<!-- SLIDE 4 FAMILY -->
+<div class="slide">
+<div class="title">With Blessings From Our Families</div>
+<div class="family-box">
+Shri Mantu Kumar (Father)<br>
+Smt. Manju Devi (Mother)<br>
+Shri Sunny Kumar (Brother)<br>
+Smt. Radha Kumari (Bhabhi)<br>
+Kittu (Raunak Kumar) & Kitti (Kritti Kumari)<br>
+All Brothers, Sisters, Relatives & Friends
+</div>
+</div>
+
+<!-- SLIDE 5 INVITATION LETTER -->
+<div class="slide">
+<div class="title">A Warm Wedding Invitation</div>
+<div class="invite-text">
+With immense joy in our hearts, we cordially invite you and your family to be a part of the most special and sacred occasion of our lives — our wedding ceremony. Your gracious presence, blessings, and good wishes will make this celebration truly meaningful and unforgettable for us.
+</div>
+</div>
+
+<!-- SLIDE 6 EVENT DETAILS -->
+<div class="slide">
+<div class="title">Wedding Event Details</div>
+<div class="invite-text">
+
+<div class="event-card">
+<b>Tilak Ceremony</b><br>
+Date: 07 May 2026
+</div>
+
+<div class="event-card">
+<b>Haldi Ceremony</b><br>
+Date: 10 May 2026
+</div>
+
+<div class="event-card">
+<b>Barat Ceremony</b><br>
+Date: 11 May 2026<br>
+Starting Point: DATIYANA
+</div>
+
+</div>
+</div>
+
+<!-- SLIDE 7 WEDDING CARD PHOTO -->
+<div class="slide">
+<div class="title">Wedding Invitation Card</div>
+
+<div class="subtitle">
+We are delighted to share our wedding invitation card with you. Kindly bless us with your presence on this joyful occasion.
+</div>
+
+<img src="./card.jpg" alt="Wedding Card" class="card-photo" style="max-width:90vw;height:auto;object-fit:contain;" onerror="this.style.display='none'; document.getElementById('cardError').style.display='block';">
+
+<div id="cardError" style="display:none;font-size:20px;color:gold;margin-top:15px;">
+⚠️ Card image not found. Please place <b>card.jpg</b> in the same folder as this file.
+</div>
+
+</div>
+
+<!-- FINAL SLIDE FIREWORKS -->
+<div class="slide">
+<div class="title">We Warmly Invite You</div>
+<div class="subtitle">
+Your presence will make our celebration complete. Please join us and bless the couple with your love and good wishes.
+</div>
+<div class="fireworks">🎆 🎇 🎆</div>
+</div>
+
+</div>
+
+<!-- SLIDE 8 THANK YOU LETTER -->
+<div class="slide">
+<div class="title">Thank You</div>
+
+<div class="subtitle">
+Thank you for being a part of our special day. Your presence, blessings, and love make our celebration complete and memorable.
+</div>
+
+<div class="credit">Made by Raja Kumar</div>
+
+</div>
+
+<script>
+
+let slides=document.querySelectorAll('.slide');
+let index=0;
+
+function showNextSlide(){
+ slides[index].classList.remove('active');
+ index++;
+ if(index>=slides.length){
+  index=slides.length-1;
+  return;
+ }
+ slides[index].classList.add('active');
+}
+
+setInterval(showNextSlide,6000);
+
+/* Floating Hearts */
+setInterval(()=>{
+ let heart=document.createElement('div');
+ heart.className='heart';
+ heart.innerHTML='💖';
+ heart.style.left=Math.random()*100+'vw';
+ document.body.appendChild(heart);
+ setTimeout(()=>heart.remove(),6000);
+},700);
+
+</script>
+
+</body>
+</html>
